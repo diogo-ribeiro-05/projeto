@@ -42,6 +42,3 @@ namespace svg
         }
     }
 }
-
-daniela tenha calma por favor
-eu tenho
