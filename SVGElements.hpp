@@ -24,6 +24,7 @@ namespace svg
     void readSVG(const std::string &svg_file,
                  Point &dimensions,
                  std::vector<SVGElement *> &svg_elements);
+                 
     void convert(const std::string &svg_file,
                  const std::string &png_file);
 
@@ -38,5 +39,19 @@ namespace svg
         Point center;
         Point radius;
     };
+                    
+    //our code:
+    
+    class Circle: public SVGElement
+    {
+        public:
+        Circle(const Color &fill, const Point &center, const Point &radius);
+        void draw(PNGImage &img) const override;
+
+    private: 
+        Color fill;
+        Point center;
+        int radius;
+    }
 }
 #endif
