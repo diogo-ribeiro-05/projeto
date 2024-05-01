@@ -52,6 +52,6 @@ namespace svg
         Color fill;
         Point center;
         int radius;
-    }
+    };
 }
 #endif
