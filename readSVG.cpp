@@ -40,5 +40,6 @@ namespace svg
                 svg_elements.push_back(new Ellipse(fill, center, radius));
             }
         }
+        cona
     }
 }
