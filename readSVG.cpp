@@ -25,7 +25,9 @@ namespace svg
         
         for (XMLElement *child = xml_elem->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
         {
-            child->Name()
+            if (child->Name() == "Elipse"){
+                svg_elements.push_back(new Elipse())
+            }
         }
     }
 }
