@@ -45,13 +45,27 @@ namespace svg
                 center.x = child->IntAttribute("cx");
                 center.y = child->IntAttribute("cy");
 
-                Point radius;
-                radius = child->IntAttribute("rx");
+                int radius;
+                radius = child->IntAttribute("r");
             
                 Color fill;
                 fill = parse_color(child->Attribute("fill"));
 
-                svg_elements.push_back(new Ellipse(fill, center, radius));
+                svg_elements.push_back(new Circle(fill, center, radius));
+            }
+
+            if (child->Name() == (string)"circle"){
+                Point center;
+                center.x = child->IntAttribute("cx");
+                center.y = child->IntAttribute("cy");
+
+                int radius;
+                radius = child->IntAttribute("r");
+            
+                Color fill;
+                fill = parse_color(child->Attribute("fill"));
+
+                svg_elements.push_back(new Circle(fill, center, radius));
             }
         }
     }
