@@ -43,7 +43,4 @@ namespace svg
     }
 }
 
-llll
-ggg
-ggg
-gggg
+daniela tenha calma por favor
