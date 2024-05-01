@@ -21,7 +21,3 @@ namespace svg
     // HERE -->
 
 }
-
-ldaokdw
-adowajddadw
-adawkp
