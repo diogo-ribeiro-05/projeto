@@ -23,5 +23,9 @@ namespace svg
         
         // TODO complete code -->
         
+        for (XMLElement *child = xml_elem->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
+        {
+            child->Name()
+        }
     }
 }
