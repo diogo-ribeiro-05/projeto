@@ -25,8 +25,19 @@ namespace svg
         
         for (XMLElement *child = xml_elem->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
         {
-            if (child->Name() == "Elipse"){
-                svg_elements.push_back(new Elipse())
+            if (child-> == "ellipse"){
+                Point center;
+                center.x = child->IntAttribute("cx");
+                center.y = child->IntAttribute("cy");
+
+                Point radius;
+                radius.x = child->IntAttribute("rx");
+                radius.y = child->IntAttribute("ry");
+
+                Color fill;
+                fill = parse_color(child->FindAttribute("fill"));
+
+                svg_elements.push_back(new Ellipse(fill, center, radius));
             }
         }
     }
